@@ -1,20 +1,20 @@
 import React from "react";
 import './main-page.sass'
-import Electronics from "../main-page-components/electronics";
-import Jewelery from "../main-page-components/jewelery";
-import MensClothing from "../main-page-components/mens-clothing";
-import WomensClothing from "../main-page-components/womens-clothing";
+import { useGetSingleProductQuery } from "../../services/fakestoreapi";
+import MainPageComponent from "../main-page-component/main-page-component";
 
 
+// В MainPageComponent передаём хук одного отдельного товара для отображения категории с картинкой
+// для смены категории и картинки нужно поменять id товара в useGetSingleProductQuery(id)
 const MainPage = () => {
     return (
         <>
             <h1>My Shop</h1>
             <div className="container">
-                <Electronics />
-                <Jewelery />
-                <MensClothing />
-                <WomensClothing />
+                <MainPageComponent getData={useGetSingleProductQuery(12)}/>
+                <MainPageComponent getData={useGetSingleProductQuery(5)}/>
+                <MainPageComponent getData={useGetSingleProductQuery(2)}/>
+                <MainPageComponent getData={useGetSingleProductQuery(17)}/>
             </div> 
         </>
     )

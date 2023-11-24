@@ -17,23 +17,18 @@ const Category = () => {
 
     let key = 100;
     const product = categoryId.map((product) => {
-
         const productLink = `/products/${product.id}`;
 
         return (
-            <>
-                <div key = {key++} className="box">
-                    <ul>
-                        <li>{product.id}</li>
-                        <li><Link to={productLink}>{product.title}</Link></li>
-                        <li>{product.category}</li>
-                        <li>{product.price}$</li>
-                        <li>{product.rating.count}</li>
-                        <li>{product.rating.rate}</li>
-                    </ul>
-                    <img src={product.image} alt='product'/>
-                </div>
-            </>
+            <div key = {key++} className="box">
+                <img src={product.image} alt='product'/>
+                <Link to={productLink} className="category-item-title">{product.title}</Link>
+                <ul>
+                    <li>price: <strong>{product.price} $</strong></li>
+                    <li>total orders: <strong>{product.rating.count}</strong></li>
+                    <li>rating: <strong>{product.rating.rate}</strong> <span style={{color: 'gold'}}>&#9733;</span></li>
+                </ul>
+            </div>
         )
     });
 

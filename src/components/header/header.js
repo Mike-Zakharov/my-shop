@@ -13,17 +13,17 @@ const Header = () => {
     }
 
     const category = data.map((item) => {
-        return <Link to={item} className="nav-link">{item}</Link>
+        return <Link to={item} key={item} className="nav-link">{item}</Link>
     })
 
     return (
         <div className="header">
             <div>
-                <Link to='/' className="nav-link"><strong>My Shop</strong></Link>
+                <Link to='/' className="nav-link logo">My Shop</Link>
                 {category}
             </div>
             <div>
-                <Link className="nav-link">Cart</Link>
+                <Link to='/cart'className="nav-link">Cart</Link>
                 <Link className="nav-link">Contacts</Link>
             </div>
         </div>
