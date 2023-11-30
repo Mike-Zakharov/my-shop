@@ -32,10 +32,10 @@ const SingleProduct = () => {
                 <h3>{product.title}</h3>
                 <ul className="descr-list">
                     <li>{product.description}</li>
-                    <li>category: <strong>{product.category}</strong></li>
-                    <li>price: <strong>{product.price} $</strong></li>
-                    <li>total orders: <strong>{product.rating.count}</strong></li>
-                    <li>rating: <strong>{product.rating.rate}</strong> <span style={{color: 'gold'}}>&#9733;</span></li>
+                    <li>category: <span>{product.category}</span></li>
+                    <li>price: <span>{product.price} $</span></li>
+                    <li>total orders: <span>{product.rating.count}</span></li>
+                    <li>rating: <span>{product.rating.rate}</span> <span style={{color: 'gold'}}>&#9733;</span></li>
                 </ul>
                 <div className="single-product_btn-wrapper">
                     <button onClick={handleAddToCart} className="btn btn_medium">

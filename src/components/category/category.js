@@ -24,9 +24,9 @@ const Category = () => {
                 <img src={product.image} alt='product'/>
                 <Link to={productLink} className="category-item-title">{product.title}</Link>
                 <ul>
-                    <li>price: <strong>{product.price} $</strong></li>
-                    <li>total orders: <strong>{product.rating.count}</strong></li>
-                    <li>rating: <strong>{product.rating.rate}</strong> <span style={{color: 'gold'}}>&#9733;</span></li>
+                    <li>price: <span>{product.price} $</span></li>
+                    <li>total orders: <span>{product.rating.count}</span></li>
+                    <li>rating: <span>{product.rating.rate}</span> <span style={{color: 'gold'}}>&#9733;</span></li>
                 </ul>
             </div>
         )

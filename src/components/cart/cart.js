@@ -2,6 +2,7 @@ import React from "react";
 import './cart.sass';
 import {  useSelector } from "react-redux";
 import CartItem from "../cart-item/cart-item";
+import TotalProductsInCart from "../total-products-in-cart/total-products-in-cart";
 
 
 const CartComponent = () => {
@@ -22,11 +23,14 @@ const CartComponent = () => {
             />
         )
     })
+
+
     
     return (
         <div className="cart">
             <h2 className="cart-header">Yuor cart</h2>
             {products}
+            <TotalProductsInCart/>
         </div>
     )
 

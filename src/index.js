@@ -13,6 +13,7 @@ import {store} from './store/store';
 import SingleProduct from './components/single-product/single-product';
 import MainPage from './components/main-page';
 import CartComponent from './components/cart';
+import ThanksPage from './components/thanks-page/thanks-page';
 
 
 const router = createBrowserRouter([
@@ -34,7 +35,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/cart",
-				element: <CartComponent/>
+				element: <CartComponent />
+			},
+			{
+				path: "/thanks-page",
+				element: <ThanksPage />
 			}
 		]  
 	}  

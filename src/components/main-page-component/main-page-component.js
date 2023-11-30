@@ -19,7 +19,7 @@ const MainPageComponent = ({getData}) => {
 
     return (
         <div className="box">
-            <Link to={data.category} className="link">{data.category}</Link>
+            <Link to={data.category} className="main-page_link">{data.category}</Link>
             <img src={data.image} alt={data.category}/>
         </div>
     )
